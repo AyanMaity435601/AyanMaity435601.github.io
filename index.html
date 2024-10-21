@@ -79,6 +79,47 @@
   animation: typing-cursor 0.5s ease-in-out infinite;
 }
 
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgb(86, 64, 64);
+    color: #ededed;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form .send {
+    background: #0ef;
+    border: none;
+    padding: 14px 60px;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #02141d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-form .send:hover {
+    box-shadow: 0 0 20px #0ef;
+    transform: scale(1.05);
+}
+
+
 @keyframes typing {
   from {
     width: 0;
@@ -130,7 +171,8 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item"><a href="#certificate-section" class="nav-link"><span>Certificate</span></a></li>
+			  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -606,17 +648,46 @@
 		</div>
 	</section>
 
+	<section class="ftco-section ftco-no-pb" id="certificate-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Certificate</h1>
+            <h2 class="mb-4">Certificate</h2>
 
-<!-- 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center ftco-animate">
-			  <h1 class="big big-2">Contact</h1>
-			  <h2 class="mb-4">ContactMe</h2>
-			  <p>Below are the details to reach out to me!</p>
+			<div class="image-certificate">
+				<img src="certificates/isi.jpg" class="img-fluid rounded b-shadow-a" alt="">
 			</div>
-		  </div> -->
+			<div class="image-certificate">
+				<img src="certificates/iit1.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/iit2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/udemy.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/sql_basic.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/python_basic.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/ml.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+			<div class="image-certificate">
+				<img src="certificates/lor.jpg" class="img-fluid rounded b-shadow-a" alt="">
+			</div>
+		  </div>
+        </div>
+	</section>
+<!-- 
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div> -->
+
 
 
 
@@ -674,11 +745,20 @@
 			<div class="container">
 			  <br>
 			  <br>
-			  <div class="row justify-content-center">
-				  <div class="col-md-7 ftco-animate text-center">
-					  <h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5owaqOuZkbIbFNlHZEUB94frHRR15M1iZFYP6roevnjiAMg/viewform?vc=0&c=0&w=1&flr=0&pli=1 " class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				  </div>
-			  </div>
+			  <div class="contact-form">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Have a <span>Question?</span></h2>
+						<form action="">
+							<input type="text" placeholder="Enter your name" required>
+							<input type="email" placeholder="Enter your email" required>
+							<input type="text" placeholder="Enter your Subject" required>
+							<textarea cols="40" rows="10" placeholder="Enter your message" required></textarea>
+							<input type="submit" value="Submit" class="send">
+						</form>
+					</div>
+				</div>
+			</div>
 				  <br>
 					  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 						<li class="ftco-animate normal-txt">Find me on  </li>
@@ -701,7 +781,7 @@
 		  <div class="container">
 			<div class="row">
 			  <div class="col-md-12 text-center">
-	
+				<p>Thank You for visiting my Portfolio. Connect with me over Socials.</p>
 				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 	  This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/ayan-maity-7b69b0294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Ayan Maity</a>
 	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
