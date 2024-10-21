@@ -460,7 +460,11 @@ pre {
   width: 100%; /* Full width of the column */
   height: auto; /* Maintain aspect ratio */
 }
-
+.image-certificate
+{
+  width: 100%;
+  padding-top: 20px;
+}
 .resume-wrap {
   margin-top: 20px; /* Space between image and text */
   text-align: center; /* Center-align text */
