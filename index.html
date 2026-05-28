@@ -756,11 +756,19 @@
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>Have a <span>Question?</span></h2>
-						<form action="">
+						<!-- <form action="">
 							<input type="text" placeholder="Enter your name" required>
 							<input type="email" placeholder="Enter your email" required>
 							<input type="text" placeholder="Enter your Subject" required>
 							<textarea cols="40" rows="10" placeholder="Enter your message" required></textarea>
+							<input type="submit" value="Submit" class="send">
+						</form> -->
+						<form action="https://formspree.io/f/xqejwopl" method="POST">
+							<input type="hidden" name="_replyto" value="ayanmaity813@gmail.com">
+							<input type="text" name="name" placeholder="Enter your name" required>
+							<input type="email" name="email" placeholder="Enter your email" required>
+							<input type="text" name="subject" placeholder="Enter your Subject" required>
+							<textarea cols="40" rows="10" name="message" placeholder="Enter your message" required></textarea>
 							<input type="submit" value="Submit" class="send">
 						</form>
 					</div>
