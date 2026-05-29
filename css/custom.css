@@ -1,0 +1,342 @@
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+.skill-mf .progress {
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: visible;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+#typing-animation:before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgb(86, 64, 64);
+    color: #ededed;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form .send {
+    background: #0ef;
+    border: none;
+    padding: 14px 60px;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #02141d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-form .send:hover {
+    box-shadow: 0 0 20px #0ef;
+    transform: scale(1.05);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-cursor {
+  from { width: 5px; }
+  to { width: 0; }
+}
+
+/* project image zoom effect */
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+/* Education card style */
+.edu-card {
+  text-align: center;
+  padding: 10px;
+}
+
+.edu-card .image-box img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.edu-card .date {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.edu-card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.edu-card .position {
+  font-size: 0.82rem;
+  color: #bbb;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.edu-card .grade {
+  font-size: 0.82rem;
+  color: #ffbd39;
+  font-weight: 600;
+}
+
+/* ======================================
+   MOBILE RESPONSIVENESS FIXES
+====================================== */
+
+/* Prevent horizontal scroll on all screen sizes */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Hero section image — desktop default */
+/* Hero section image */
+.hero-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-left: 450px;   /* move image slightly to right */
+}
+
+/* ---- Large screens where image still overflows (max 1200px) ---- */
+@media (max-width: 1200px) {
+  .hero-img {
+    transform: translateX(100px);
+    max-width: 500px;
+  }
+}
+
+/* ---- Tablets (max 992px) ---- */
+@media (max-width: 992px) {
+  .hero-img {
+    transform: translateX(40px);
+    max-width: 380px;
+  }
+}
+
+/* ---- Mobile (max 768px) ---- */
+@media (max-width: 768px) {
+
+  /* Reduce hero section height */
+  .hero .slider-item {
+    min-height: 600px !important;
+    height: 600px !important;
+  }
+
+  .hero .js-fullheight {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* Fix hero image — remove translateX completely */
+  .hero-img {
+    transform: translateX(0) !important;
+    max-width: 100% !important;
+    width: 75% !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Center the hero image container */
+  .one-third {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 20px !important;
+  }
+
+  /* Typing animation font size */
+  #typing-animation {
+    font-size: 20px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Skills text wrapping */
+  .skill-mf p {
+    font-size: 0.82rem;
+    word-break: break-word;
+  }
+
+  /* About info list — stack label and value */
+  .about-info li.d-flex {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 6px;
+  }
+
+  /* Contact form inputs full width */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Contact info boxes */
+  .contact-info .box {
+    padding: 1rem !important;
+  }
+
+  /* Resume wrap text */
+  .resume-wrap h2 {
+    font-size: 1rem;
+    word-break: break-word;
+  }
+
+  /* Navbar brand font size */
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  /* Education card grid — 2 per row on mobile */
+  .edu-card .image-box img {
+    height: 120px;
+  }
+
+  .edu-card h2 {
+    font-size: 0.82rem;
+  }
+
+  /* Send button full width */
+  .contact-form .send {
+    padding: 14px 30px;
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  /* Section headings */
+  .big, .big-2 {
+    font-size: 3rem !important;
+  }
+
+  /* Blog entry cards */
+  .blog-entry {
+    width: 100%;
+  }
+
+  /* Counter section */
+  .block-18 .text strong.number {
+    font-size: 2rem;
+  }
+}
+
+/* ---- Small Mobile (max 480px) ---- */
+@media (max-width: 480px) {
+
+  /* Further reduce hero height on small phones */
+  .hero .slider-item {
+    min-height: 520px !important;
+    height: 520px !important;
+  }
+
+  .hero-img {
+    width: 65% !important;
+  }
+
+  #typing-animation {
+    font-size: 16px;
+  }
+
+  .about-info li.d-flex span:first-child {
+    font-weight: 600;
+    color: #ffbd39;
+  }
+
+  /* Edu cards: 2 per row still but smaller */
+  .edu-card .image-box img {
+    height: 90px;
+  }
+
+  .edu-card h2 {
+    font-size: 0.72rem;
+  }
+
+  .edu-card .date,
+  .edu-card .position,
+  .edu-card .grade {
+    font-size: 0.7rem;
+  }
+
+  /* Contact info full width stacked */
+  .contact-info .col-md-6 {
+    width: 100%;
+  }
+
+  .contact-form .send {
+    font-size: 15px;
+  }
+
+  .big, .big-2 {
+    font-size: 2.2rem !important;
+  }
+}
