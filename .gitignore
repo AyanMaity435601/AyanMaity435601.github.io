@@ -1,0 +1,5 @@
+# macOS files
+.DS_Store
+
+# Backup HTML file
+index copy.html
